@@ -33,6 +33,7 @@ class _CarritoState extends State<Carrito> {
       OrderApi().actores3.add(xOrderItem);
       OrderApi().cliente.orderItem = OrderApi().actores3;
     }
+    OrderApi().cliente.orderTotal = cartTotal.toString();
 
     // No Item in Cart AlertDialog Start Here
     void _showDialog() {
@@ -156,8 +157,7 @@ class _CarritoState extends State<Carrito> {
                               width: 120.0,
                               height: ((height - 200.0) / 4.0),
                               child: Image(
-                                image: NetworkImage(
-                                    'https://www.mall504.com/${item.picture}'),
+                                image: NetworkImage('${item.picture}'),
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
@@ -239,9 +239,16 @@ class _CarritoState extends State<Carrito> {
                                     onTap: () {
                                       setState(() {
                                         //cartItemList.removeAt(index);
+                                        double quan =
+                                            double.parse(item.stockquantity);
+                                        double pric = double.parse(item.price);
                                         cartItem--;
-                                        cartTotal = cartTotal - 0; //item.price;
+                                        cartTotal = cartTotal -
+                                            (quan * pric); //item.price;
                                         carrito.removeAt(index);
+
+                                        OrderApi().cliente.orderTotal =
+                                            cartTotal.toString();
                                         //OrderApi().cliente.orderItem.removeAt(index);
                                       });
 

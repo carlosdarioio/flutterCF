@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 //import 'dart:convert'
 
 import 'package:flutter/material.dart';
@@ -43,26 +44,33 @@ class _PagarState extends State<Pagar> {
   Widget build(BuildContext context) {
     //x aqui vas pone los valores a la clase global de manera manual
     //eso para aser el post al servicio y ver como responde
-    OrderApi().cliente.billingAddressId = "99";
+    OrderApi().cliente.billingAddressId = "1";
     OrderApi().cliente.cardCvv2 = "031";
     OrderApi().cliente.cardExpirationMonth = "07";
     OrderApi().cliente.cardExpirationYear = "21";
-    OrderApi().cliente.cardName = "carlosdarioio";
+    OrderApi().cliente.cardName = "carlosdarioio2";
     OrderApi().cliente.cardNumber = "4565419025310807";
     OrderApi().cliente.cardType = "Visa";
-    OrderApi().cliente.customOrderNumber = "99";
-    OrderApi().cliente.customerId = "99";
-    OrderApi().cliente.id = "99";
+    OrderApi().cliente.customOrderNumber = "7";
+    OrderApi().cliente.customerId = "8";
+    OrderApi().cliente.id = "1";
     OrderApi().cliente.pickUpInStore = "0";
     OrderApi().cliente.shippingAddressId = "1";
     OrderApi().cliente.storeId = "1";
 
-    OrderApi().cliente.orderTotal = "99";
+    //OrderApi().cliente.orderTotal = "45";
     OrderApi().cliente.email = "cdfn3@hotmail.com";
-    OrderApi().cliente.catid = "99";
+    OrderApi().cliente.catid = "1";
     //OrderApi().cliente.orderTotal //ya esta calculado junto a articulos
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Pagar'),
+        actions: <Widget>[
+          //IconButton(icon: Icon(Icons.developer_board), onPressed: null),
+          //IconButton(icon: Icon(Icons.search), onPressed: null)
+        ],
+      ),
       body: ListView(
         children: <Widget>[
           Container(
@@ -210,7 +218,7 @@ class _PagarState extends State<Pagar> {
                               ),
                               InkWell(
                                 child: Text(
-                                  "Pagasr",
+                                  "Pagar",
                                   style: TextStyle(
                                     fontFamily: 'Alatsi',
                                     color: Theme.of(context).primaryColor,
@@ -221,6 +229,7 @@ class _PagarState extends State<Pagar> {
                                 onTap: () {
                                   //accion de pago--------------------------------------
                                   createAlbumPOST('hay madre');
+                                  //createAlbumGET('hay madre');
                                 },
                               ),
                             ],
@@ -278,29 +287,77 @@ class _PagarState extends State<Pagar> {
     );
   }
 
+//ata aqui iii
   void createAlbumPOST(String title) async {
-    String gg = OrderApi().clientToJson(OrderApi().cliente);
-
-    print('PostEmpezando $gg');
-    final http.Response response = await http.post(
-        'http://service.mall504.com/NopService.svc/xpostOrderCelphone',
-        headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: OrderApi().clientToJson(OrderApi()
-            .cliente) // jsonEncode(<String, String>{      'title': title,    }),
-        );
+    //String gg = OrderApi().clientToJson(OrderApi().cliente);
+    //print('body: ${gg.replaceAll('"', '\\"')} ');
+    /**/ final jsonString = OrderApi().clientToJson(OrderApi().cliente);
+    print('PostEmpezando ${jsonString.replaceAll('"', '\\"')}');
+    final uri =
+        'http://192.168.0.18/CfService/NopService.svc/xpostOrderCelphone';
+    final headers = {
+      HttpHeaders.contentTypeHeader: 'application/json',
+      "Content-Type": "application/json",
+    };
+    final response = await http.post(uri,
+        headers: headers,
+        body: utf8.encode('"${jsonString.replaceAll('"', '\\"')}"'));
     //console log
-    print('data: $response');
+    print('status: ${response.statusCode}');
+    print('headers: ${response.headers}');
+    print('request: ${response.request}');
+    print('body: ${response.body} ');
+    if (response.statusCode == 200) {
+      _showDialog();
+    }
   }
 
   void createAlbumGET(String title) async {
     String gg = OrderApi().clientToJson(OrderApi().cliente);
     print('GetEmpezando $gg');
     final response = await http.get(
-        'http://service.mall504.com/NopService.svc/xpostOrderCelphone/$gg');
+        //'http://service.mall504.com/NopService.svc/xpostOrderCelphone/$gg');
+        'http://192.168.0.18/CfService/NopService.svc/xpostOrderCelphone/$gg');
 
-    print('LASTdata: $response.body');
+    print('Gstatus: ${response.statusCode}');
+    print('Gheaders: ${response.headers}');
+    print('Grequest: ${response.request}');
+    print('Gbody: ${response.body} '); /**/
   }
+
 //test post alolaaaaaaaaaaaaaaaaa
+// No Item in Cart AlertDialog Start Here
+  void _showDialog() {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: Text(
+            "Confirmacion",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          content: Text("Gracias por su Compra"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            FlatButton(
+              child: Text(
+                "Cerrar",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+  // No Item in Cart AlertDialog Ends Here
 }

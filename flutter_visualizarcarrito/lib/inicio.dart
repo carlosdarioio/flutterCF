@@ -43,8 +43,7 @@ class _InicioState extends State<Inicio> {
                 children: <Widget>[
                   new InkResponse(
                     child: FadeInImage(
-                      image: NetworkImage(
-                          'https://www.mall504.com/${headlines[index].picture}'),
+                      image: NetworkImage('${headlines[index].picture}'),
                       placeholder: AssetImage('assets/img/no-image.jpg'),
                       fit: BoxFit.cover,
                       height: 100.0,
