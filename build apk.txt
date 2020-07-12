@@ -1,3 +1,10 @@
 en terminal poner
 
 flutter build apk --release
+
+
+Recordar xd
+
+
+posteando lo recibir como clase de c#
+enviando desde android la clase como string
