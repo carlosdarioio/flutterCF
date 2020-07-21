@@ -1,30 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getjsonlist/carrito.dart';
+import 'package:flutter_getjsonlist/inicio.dart';
 import 'package:flutter_getjsonlist/service/home_service.dart';
 import 'package:flutter_getjsonlist/service/products_service.dart';
+
 import 'package:provider/provider.dart';
 
-//pusiste inicio pero es Lista de productos
-class Inicio extends StatefulWidget {
-  const Inicio({Key key, this.catid}) : super(key: key);
-  final catid;
+//pendiente definir que se requiere mandar cat id
+class SubCats extends StatefulWidget {
+  final String catid;
+  const SubCats({Key key, @required this.catid}) : super(key: key);
 
   @override
-  _InicioState createState() => _InicioState();
+  _SubCatsState createState() => _SubCatsState();
 }
 
-class _InicioState extends State<Inicio> {
-  void getProductList(String txt) async {
-    await Provider.of<ProductsService>(context).getArticlesByCategory(txt);
+class _SubCatsState extends State<SubCats> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  void getprovider(String txt) async {
+    await Provider.of<HomeCategoriesService>(context).getArticulosxCarrito(txt);
   }
 
   @override
   Widget build(BuildContext context) {
-    getProductList(widget.catid);
-    final headlines = Provider.of<ProductsService>(context).listaArticulos;
+    getprovider(widget.catid);
+    final headlines = Provider.of<HomeCategoriesService>(context).carrito;
     return Scaffold(
       appBar: AppBar(
-        title: Text('${widget.catid} Lista de productos'),
+        title: Text('Mall504'),
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.developer_board),
@@ -57,15 +70,20 @@ class _InicioState extends State<Inicio> {
                       height: 100.0,
                     ),
                     onTap: () {
-                      print(index);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Inicio(
+                                  catid: headlines[index].id,
+                                )), //pusisteinicio pero es lista de art
+                      );
                     },
                   ),
                   ListTile(
                     //leading: Icon(Icons.photo_album),
-                    title: Text('${headlines[index].name}',
+                    title: Text(
+                        '${headlines[index].id}-${headlines[index].name}',
                         style: TextStyle(fontSize: 14.0)),
-                    subtitle: Text('L. ${headlines[index].price}',
-                        style: TextStyle(fontSize: 11.0)),
                   )
                 ],
               ));
