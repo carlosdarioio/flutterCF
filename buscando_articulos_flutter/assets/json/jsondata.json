@@ -1,0 +1,161 @@
+[{
+        "Name": "Build your own computer",
+        "Oldprice": 1380,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000020_build-your-own-computer.jpeg",
+        "Price": 1200,
+        "ShortDescription": "The black IBM zBC12 has a built-in microphone and MOTION EYE camera with face-tracking technology that allows for easy communication with friends and family. And it has a built-in DVD",
+        "id": 1,
+        "sku": "COMP_CUST",
+        "stockquantity": 12
+    },
+    {
+        "Name": "Digital Storm VANQUISH 3 Custom Performance PC",
+        "Oldprice": 1447.85,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000022_digital-storm-vanquish-3-custom-performance-pc.jpeg",
+        "Price": 1259,
+        "ShortDescription": "Digital Storm Vanquish 3 Desktop PC",
+        "id": 2,
+        "sku": "DS_VA3_PC",
+        "stockquantity": 15
+    },
+    {
+        "Name": "Lenovo IdeaCentre 600 All-in-One PC",
+        "Oldprice": 575,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000023_lenovo-ideacentre-600-all-in-one-pc.jpeg",
+        "Price": 500,
+        "ShortDescription": "Error",
+        "id": 3,
+        "sku": "LE_IC_600",
+        "stockquantity": 6
+    },
+    {
+        "Name": "Apple MacBook Pro 13-inch",
+        "Oldprice": 0,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000024_apple-macbook-pro-13-inch.jpeg",
+        "Price": 1800.58,
+        "ShortDescription": "A groundbreaking Retina display. A new force-sensing trackpad. All-flash architecture. Powerful dual-core and quad-core Intel processors. Together, these features take the notebook to a new level of performance. And they will do the same for you in everything you create.",
+        "id": 4,
+        "sku": "AP_MBP_13",
+        "stockquantity": 1000
+    },
+    {
+        "Name": "Asus N551JK-XO076H Laptop",
+        "Oldprice": 1725,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000026_asus-n551jk-xo076h-laptop.jpeg",
+        "Price": 1500,
+        "ShortDescription": "Laptop Asus N551JK Intel Core i7-4710HQ 2.5 GHz, RAM 16GB, HDD 1TB, Video NVidia GTX 850M 4GB, BluRay, 15.6, Full HD, Win 8.1",
+        "id": 5,
+        "sku": "AS_551_LP",
+        "stockquantity": 100
+    },
+    {
+        "Name": "Samsung Series 9 NP900X4C Premium Ultrabook",
+        "Oldprice": 1828.5,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000027_samsung-series-9-np900x4c-premium-ultrabook.jpeg",
+        "Price": 1590,
+        "ShortDescription": "Samsung Series 9 NP900X4C-A06US 15-Inch Ultrabook (1.70 GHz Intel Core i5-3317U Processor, 8GB DDR3, 128GB SSD, Windows 8) Ash Black",
+        "id": 6,
+        "sku": "SM_900_PU",
+        "stockquantity": 10
+    },
+    {
+        "Name": "HP Spectre XT Pro UltraBook",
+        "Oldprice": 1552.5,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000028_hp-spectre-xt-pro-ultrabook.jpeg",
+        "Price": 1350,
+        "ShortDescription": "HP Spectre XT Pro UltraBook / Intel Core i5-2467M / 13.3 / 4GB / 128GB / Windows 7 Professional / Laptop",
+        "id": 7,
+        "sku": "HP_SPX_UB",
+        "stockquantity": 1
+    },
+    {
+        "Name": "HP Envy 6-1180ca 15.6-Inch Sleekbook",
+        "Oldprice": 1679,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000030_hp-envy-6-1180ca-156-inch-sleekbook.jpeg",
+        "Price": 1460,
+        "ShortDescription": "HP ENVY 6-1202ea Ultrabook Beats Audio, 3rd generation Intel® CoreTM i7-3517U processor, 8GB RAM, 500GB HDD, Microsoft Windows 8, AMD Radeon HD 8750M (2 GB DDR3 dedicated)",
+        "id": 8,
+        "sku": "HP_ESB_15",
+        "stockquantity": 11
+    },
+    {
+        "Name": "Lenovo Thinkpad X1 Carbon Laptop",
+        "Oldprice": 1564,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000031_lenovo-thinkpad-x1-carbon-laptop.jpeg",
+        "Price": 1360,
+        "ShortDescription": "Lenovo Thinkpad X1 Carbon Touch Intel Core i7 14 Ultrabook",
+        "id": 9,
+        "sku": "LE_TX1_CL",
+        "stockquantity": 112
+    },
+    {
+        "Name": "Adobe Photoshop CS4",
+        "Oldprice": 86.25,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000032_adobe-photoshop-cs4.jpeg",
+        "Price": 75,
+        "ShortDescription": "Easily find and view all your photos",
+        "id": 10,
+        "sku": "AD_CS4_PH",
+        "stockquantity": 9999
+    },
+    {
+        "Name": "Windows 8 Pro",
+        "Oldprice": 74.75,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000033_windows-8-pro.jpeg",
+        "Price": 65,
+        "ShortDescription": "Windows 8 is a Microsoft operating system that was released in 2012 as part of the companys Windows NT OS family. ",
+        "id": 11,
+        "sku": "MS_WIN_8P",
+        "stockquantity": 7
+    },
+    {
+        "Name": "Sound Forge Pro 11 (recurring)",
+        "Oldprice": 63.2385,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000034_sound-forge-pro-11-recurring.jpeg",
+        "Price": 54.99,
+        "ShortDescription": "Advanced audio waveform editor.",
+        "id": 12,
+        "sku": "SF_PRO_11",
+        "stockquantity": 3
+    },
+    {
+        "Name": "Nikon D5500 DSLR",
+        "Oldprice": 770.5,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000035_nikon-d5500-dslr.jpeg",
+        "Price": 670,
+        "ShortDescription": "Slim, lightweight Nikon D5500 packs a vari-angle touchscreen",
+        "id": 13,
+        "sku": "N5500DS_0",
+        "stockquantity": 3
+    },
+    {
+        "Name": "Nikon D5500 DSLR - Black",
+        "Oldprice": 770.5,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000037_canon-digital-slr-camera-black.jpeg",
+        "Price": 670,
+        "ShortDescription": "Error",
+        "id": 14,
+        "sku": "N5500DS_B",
+        "stockquantity": 3
+    },
+    {
+        "Name": "Leica T Mirrorless Digital Camera",
+        "Oldprice": 609.5,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000039_leica-t-mirrorless-digital-camera.jpeg",
+        "Price": 530,
+        "ShortDescription": "Leica T (Typ 701) Silver",
+        "id": 16,
+        "sku": "LT_MIR_DC",
+        "stockquantity": 10000
+    },
+    {
+        "Name": "Apple iCam",
+        "Oldprice": 1495.506,
+        "Picture": "https://www.mall504.com/content/images/thumbs/0000040_apple-icam.jpeg",
+        "Price": 1300.44,
+        "ShortDescription": "Photography becomes smart",
+        "id": 17,
+        "sku": "APPLE_CAM",
+        "stockquantity": 9999
+    }
+]
