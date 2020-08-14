@@ -2,7 +2,7 @@
 
 ## appletenhtml
 
-En este ejemplo de programacion con flutter comparto una app
+comparto una app realizada en Flutter
 
 en la que podremos realizar busqueda de articulos mostrando el resultado
 
