@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Descripcion
 
-Realizando busquedas de posibles carousel a utilizar los testie dentro de este proyecto en el cual comparto widgets que me pareciero
+Realizando busquedas de posibles carousel a utilizar los testie dentro de este proyecto en el cual comparto widgets que me parecieron
 
 ##Pre vistas
 
