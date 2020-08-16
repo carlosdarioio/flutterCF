@@ -1,10 +1,7 @@
-en terminal poner
+Como publicar apk desde Visual Studio Code?
+
+Simple, en la terminal poner
 
 flutter build apk --release
 
 
-Recordar xd
-
-
-posteando lo recibir como clase de c#
-enviando desde android la clase como string
