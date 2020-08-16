@@ -1,16 +1,19 @@
 # buscando_articulos_flutter
 
-A new Flutter project.
+## appletenhtml
 
-## Getting Started
+comparto una app realizada en Flutter
 
-This project is a starting point for a Flutter application.
+en la que podremos realizar busqueda de articulos mostrando el resultado
 
-A few resources to get you started if this is your first Flutter project:
+en la misma pagina sin nesecidad de presionar un boton de busqueda
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+la aplicacion de actualizara con cada letra que escribas.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Comparto previstas:
+
+
+![alt text](https://github.com/carlosdarioio/flutterCF/blob/master/buscando_articulos_flutter/Demo1.png)
+
+
+![alt text](https://github.com/carlosdarioio/flutterCF/blob/master/buscando_articulos_flutter/Demo2.png)
